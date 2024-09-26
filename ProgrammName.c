@@ -3,13 +3,13 @@
 
 int main()
 {
-int c1, c2, c3, sum, max;
+int c1, c2, c3, max, sum, n;
 printf("Enter c1 \n");
-scanf("%f", &c1);
+scanf("%i", &c1);
 printf("Enter c2 \n");
-scanf("%f", &c2);
+scanf("%i", &c2);
 printf("Enter c3 \n");
-scanf("%f", &c3);
+scanf("%i", &c3);
 
 if ((c1==c2) && (c1==c3))
 {
@@ -20,27 +20,35 @@ if(c1>c2)
 {
     if(c1>c3)
     {
-        max=c1;
-        sum=5;
+        max = c1;
+        sum = 5;
     }
     else
     {
-        max=c3;
-        sum=3;
+        max = c3;
+        sum = 3;
     }
 }
 else
 {
     if(c2>c3)
     {
-        max=c2;
-        sum=4;
+        max = c2;
+        sum = 4;
     }
     else
     {
-        max=c3;
-        sum=3; //Значения не присваиваюстя, надо это исправить.
+        max = c3;
+        sum = 3; 
     }
 }
-printf("%f  %f\n", max, sum);
+if((max%3)==0)
+{
+    n=(max-sum);
+}
+else
+{
+    n=(sum/max);
+}
+printf("%i\n", n);
 }
