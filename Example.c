@@ -17,16 +17,19 @@ int main()
     printf("f(x) = ");
     if (a)
     {
-        printf("%.2f * x^2 ", a);
+        if(a > 0.0f)
+            printf("%.2f * x^2 ", a);
+        else
+            printf("- %.2f * x^2 ", -a);
     }
     if (b)
-        if (b > 0.0f)
             if (a)
-                printf("+ %.2f * x", b);
-            else
-                printf("%.2f * x", b);
+                if (b > 0.0f)
+                    printf("+ %.2f * x ", b);
+                else
+                    printf("- %.2f * x ", -b);
         else
-            printf("%.2f * x", b);
+            printf("%.2f * x ", b);
     if (c)
     {
             if (a || b)
@@ -37,6 +40,7 @@ int main()
             else
                 printf("%.2f", c);
     printf("\n");
+    }
 
     float f_x = a * x * x + b * x + c;
     float f_minus_x = a * -x * -x + b * -x + c;
