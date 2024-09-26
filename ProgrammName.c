@@ -3,8 +3,9 @@
 
 int main()
 {
-int c1, c2, c3, max, sum, n, r;
-printf("programm works only with integer");
+int c1, c2, c3, max, sum;
+float n;
+printf("programm works only with integer \n");
 printf("Enter c1 \n");
 scanf("%i", &c1);
 printf("Enter c2 \n");
@@ -12,9 +13,9 @@ scanf("%i", &c2);
 printf("Enter c3 \n");
 scanf("%i", &c3);
 
-if ((c1==c2) && (c1==c3))
+if ((c1==c2) || (c1==c3) || (c2==c3))
 {
-    printf("Error: can't c1==c2==c3 \n");
+    printf("Error: Variables cannot be equal to each other \n");
     return 0;
 }
 if(c1>c2)
@@ -49,7 +50,7 @@ if((max%3)==0)
 }
 else
 {
-    n=(sum/max);
+    n=((float)sum/(float)max);
 }
-printf("%i\n", n);
+printf("%.3f\n", n);
 }
