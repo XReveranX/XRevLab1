@@ -4,6 +4,7 @@
 int main()
 {
 int c1, c2, c3, max, sum, n, r;
+printf("programm works only with integer")
 printf("Enter c1 \n");
 scanf("%i", &c1);
 printf("Enter c2 \n");
