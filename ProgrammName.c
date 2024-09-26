@@ -3,7 +3,7 @@
 
 int main()
 {
-int c1, c2, c3, max, sum, n;
+int c1, c2, c3, max, sum, n, r;
 printf("Enter c1 \n");
 scanf("%i", &c1);
 printf("Enter c2 \n");
