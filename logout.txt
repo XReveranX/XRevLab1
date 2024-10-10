@@ -1,0 +1,4 @@
+0.000000
+Error: Variables cannot be equal to each other
+1.250000
+exit
