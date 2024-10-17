@@ -30,8 +30,10 @@ if ((c1==0)&(c2==0)&(c3==0))
     fclose(lo);
     return(0);
 }
-fprintf(lo,"Ввод пользователя: %i %i %i \n",c1 ,c2 ,c2);
-if ((c1==c2) || (c1==c3) || (c2==c3))
+
+fprintf(lo,"Ввод пользователя: %i %i %i \n",c1 ,c2 ,c3);
+
+if ((c1==c2)&(c1==c3)&(c2==c3))
 {
     fprintf(lo,"Error: Variables cannot be equal to each other\n \n"); //вывожу сообщение
     t=1;
@@ -74,7 +76,7 @@ else
 }
 printf("%f \n \n",n);
 fprintf(lo,"Вывод программы: %f\n \n", n); //вывожу значение
-}while((c1!=0) & (c2!=0) & (c3!=0));
+}while(!((c1==0)&(c2==0)&(c3==0)));
 
 fclose(lo);
 return(0);
